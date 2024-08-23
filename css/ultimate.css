@@ -1282,6 +1282,11 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
   top: 75px;
   right: -100px;
   z-index: 1;
+  transition: 0.5s;
+}
+
+.pricing-plans .card:nth-of-type(2):hover h3::before {
+  border-color: transparent transparent #f9f9f9 transparent;
 }
 
 .pricing-plans .card h3 + i {
