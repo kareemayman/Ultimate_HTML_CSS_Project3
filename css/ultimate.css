@@ -1200,6 +1200,159 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
   color: white;
   transition: 0.3s;
 }
+
+.pricing-plans {
+  background-color: var(--section-background);
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+
+.pricing-plans .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pricing-plans .container .card {
+  background-color: white;
+  box-shadow: 0px 5px 15px 3px #c1c1c194;
+  position: relative;
+  z-index: 2;
+}
+
+.pricing-plans .container .card::before {
+  content: "";
+  position: absolute;
+  height: calc(50% - 1px);
+  width: 0;
+  background-color: #f5f4f48e;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: var(--main-trans);
+}
+
+.pricing-plans .container .card::after {
+  content: "";
+  position: absolute;
+  height: calc(50% + 1px);
+  width: 0;
+  background-color: #f5f4f48e;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: var(--main-trans);
+}
+
+.pricing-plans .container .card:hover::before,
+.pricing-plans .container .card:hover::after {
+  width: 100%;
+}
+
+.pricing-plans .card h3 {
+  margin: 30px auto;
+  width: fit-content;
+  font-size: 24px;
+}
+
+.pricing-plans .card:nth-of-type(2) h3 {
+  position: relative;
+}
+
+.pricing-plans .card:nth-of-type(2) h3::after {
+  position: absolute;
+  content: "Most Popular";
+  rotate: 90deg;
+  font-size: 18px;
+  width: 120px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  top: 20px;
+  right: -150px
+}
+
+.pricing-plans .card:nth-of-type(2) h3::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 20px solid;
+  border-color: transparent transparent white transparent;
+  top: 75px;
+  right: -100px;
+  z-index: 1;
+}
+
+.pricing-plans .card h3 + i {
+  color: var(--main-color);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.pricing-plans .card h1 {
+  margin: 30px auto 40px;
+  width: fit-content;
+  color: var(--main-color);
+  font-size: 58px;
+  position: relative;
+}
+
+.pricing-plans .card h1::after {
+  content: "Per Month";
+  position: absolute;
+  font-size: 15px;
+  font-weight: normal;
+  color: #919191;
+  bottom: -20px;
+  width: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.pricing-plans .card div {
+  padding: 20px;
+  border-top: 1px solid #e9e9e9;
+}
+
+.pricing-plans .card div i {
+  margin-right: 10px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.pricing-plans .card div.button {
+  border: none;
+  margin: 20px;
+}
+
+.pricing-plans .card div.button a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 20px;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  border-radius: 6px;
+  margin: 0 auto;
+  transition: var(--main-trans);
+}
+
+.pricing-plans .card div.button a:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+.pricing-plans .card:nth-of-type(2) {
+  transform: translateY(-25px);
+}
 /* End Local Rules */
 
 
@@ -1226,6 +1379,11 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
 
 /* Start Media Queries */
 /* Start Custom */
+@media (width <= 1200px) {
+  .pricing-plans .card:nth-of-type(2) {
+    transform: translateY(0px);
+  }
+}
 @media (width <=991px) {
   .landing .container .landing-image {
     display: none;
@@ -1291,7 +1449,7 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
   }
 
   .landing .container {
-    min-height: calc(100vh - 58.75px);
+    min-height: calc(100vh - 98.75px);
   }
 
   .landing .container h1 {
@@ -1365,7 +1523,7 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
   }
 
   .landing .container {
-    min-height: calc(100vh - 106px);
+    min-height: calc(100vh - 146px);
   }
 }
 
