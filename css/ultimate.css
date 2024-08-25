@@ -1358,6 +1358,85 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
 .pricing-plans .card:nth-of-type(2) {
   transform: translateY(-25px);
 }
+
+.top-videos {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+
+.top-videos .container {
+  border: 1px solid #e2e2e2;
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.top-videos .container .info div{
+  padding: 20px;
+  min-width: 300px;
+  border-right: 1px solid #e2e2e2;
+}
+
+.top-videos .container .info .title {
+  background-color: var(--section-background);
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-videos .container .info .title i {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.top-videos .container .info .title i:hover {
+  /* color: rgb(97, 97, 97); */
+  color: var(--main-color)
+}
+
+.top-videos .container .info .card {
+  background-color: white;
+  border-top: 1px solid #e2e2e2;
+  transition: var(--main-trans);
+  cursor: pointer;
+}
+
+.top-videos .container .info .card h4:first-of-type {
+  font-weight: normal;
+  transition: var(--main-trans);
+}
+
+.top-videos .container .info .card:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.top-videos .container .info .card:hover h4:first-of-type {
+  color: var(--main-color);
+}
+
+.top-videos .container .info .card h4:last-of-type {
+  color: #777;
+  font-weight: normal;
+  padding-top: 10px;
+}
+
+.top-videos .container .preview {
+  background-color: #d8d8d8;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-videos .container .preview .image img{
+  max-width: 100%;
+}
+
+.top-videos .container .preview div:last-of-type {
+  background-color: white;
+  padding: 20px;
+}
 /* End Local Rules */
 
 
@@ -1436,6 +1515,10 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
   .events .container {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .top-videos .container {
+    flex-direction: column;
   }
 }
 
@@ -1518,6 +1601,10 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
 
   .events .container .info p {
     font-size: 17px;
+  }
+
+  .top-videos .container {
+    width: calc(100% - 30px);
   }
 }
 
