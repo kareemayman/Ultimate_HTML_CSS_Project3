@@ -1015,9 +1015,11 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
     display: block;
     height: 100%;
     background-color: var(--main-color);
+    transition: 2s;
+    width: 0;
 }
 
-.skills .container .statistic .bar:first-of-type span,
+/* .skills .container .statistic .bar:first-of-type span,
 .skills .statistic .bar:last-of-type span {
     width: 80%;
 }
@@ -1028,7 +1030,7 @@ header .container .links li:nth-of-type(4):hover .mega-menu {
 
 .skills .container .statistic .bar:nth-of-type(3) span {
     width: 70%;
-}
+} */
 
 .skills .container .statistic .bar::after {
     content: attr(data-prog);
