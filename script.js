@@ -2,6 +2,14 @@ const scrollButton = document.querySelector('.scroll-to-top')
 
 const skills = document.querySelectorAll('.skills .statistic div')
 
+let clients = document.querySelector('.stats .stat:first-of-type h1')
+
+let projects = document.querySelector('.stats .stat:nth-of-type(2) h1')
+
+let countries = document.querySelector('.stats .stat:nth-of-type(3) h1')
+
+let money = document.querySelector('.stats .stat:last-of-type h1')
+
 window.addEventListener('scroll', e => {
 
     const scrollPos = window.scrollY
@@ -26,6 +34,16 @@ window.addEventListener('scroll', e => {
 
             span.style.width = prog
         })
+    }
+
+    // Stats Counting Up Effect
+    if (scrollPos > 12000 && countries.textContent == 0) {
+
+        countUp(clients, 150)
+        countUp(projects, 135)
+        countUp(countries, 50)
+        countUp(money, 500)
+
     }
 })
 
@@ -58,7 +76,7 @@ const minsHeader = document.querySelector('.clock .minutes h1')
 const secsHeader = document.querySelector('.clock .seconds h1')
 
 setInterval(() => {
-    
+
   currentDate = new Date()
 
   countDown = nextYear - currentDate
@@ -90,3 +108,19 @@ setInterval(() => {
 const eventName = document.querySelector('.events .info > h1')
 
 eventName.textContent = `Tech Masters Event ${nextYear.getFullYear()}`
+
+// Stats Counting Effect Function
+function countUp(e, limit) {
+
+    let i = 0
+
+    let intervalId = setInterval(() => {
+        
+        e.textContent = i
+
+        i++
+
+        if (i > limit) clearInterval(intervalId)
+
+    }, 2000 / limit);
+}
