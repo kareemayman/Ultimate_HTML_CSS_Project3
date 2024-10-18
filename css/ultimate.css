@@ -35,6 +35,11 @@
   background-color: #fafafa;
 }
 
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
